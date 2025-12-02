@@ -1,0 +1,22 @@
+Question 1:
+For a problem with 100 cities, how long would it take to exhaustively examine every possible route?
+State your assumptions and explain how you arrived at your answer.
+
+- For a problem with 100 cities, there are (100-1)! = 99! possible routes, assuming we fix the starting city.
+  This is because we have 99 choices for the second city, 98 for the third, and so on.
+
+Question 2:
+What can you say about the time complexity of your approach? (ignore the time limit)
+
+- The time complexity is primarily determined by the genetic algorithm (GA). With the nearest neighbor being O(n^2)
+  and used to partially initialize the population, this massively reduces the runtime. With a fixed population
+  size and generations, the time complexity will be O(n) and the genetic operations (crossover and mutation
+  being less than O(n^2)). Overall, the time complexity approximates to O(generations * population_size * n^2),
+  where 'n' is the number of cities.
+
+Question 3:
+If your program was seen as an "agent program", which of the agent types discussed in class would it be?
+
+- Based on the agent types we have discussed in class, the program would be classified as a learning agent,
+  as since we use a genetic algorithm it learns and evolves over generations to improve the solution based on
+  the fitness function.
